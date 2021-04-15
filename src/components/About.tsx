@@ -7,17 +7,20 @@ const KleidiLink = styled.a`
 `;
 
 const AboutMe = () => (
-  <p>
-    I&apos;m a Software Engineer currently working at{' '}
-    <KleidiLink
-      href="https://kleidi.io"
-      target="_blank"
-      rel="noreferrer noopener"
-    >
-      Kleidi
-    </KleidiLink>
-    .
-  </p>
+  <div className="grid justify-items-center" style={{ marginBottom: '1rem' }}>
+    <h3>Hi. I&apos;m Cameron.</h3>
+    <p>
+      I&apos;m a Software Engineer currently working at{' '}
+      <KleidiLink
+        href="https://kleidi.io"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        Kleidi
+      </KleidiLink>
+      .
+    </p>
+  </div>
 );
 
 export default AboutMe;
