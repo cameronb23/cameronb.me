@@ -39,25 +39,33 @@ const LanyardStatusContainer = styled.section`
   display: flex;
   flex-direction: row;
   padding: 1rem;
-  background-color: #414141;
+  background-color: #292929;
   border-radius: 10px;
-  max-height: 200px;
 `;
 
 const LanyardSongArt = styled.img`
-  aspect-ratio: 1 / 1;
-  flex: 1;
   max-width: inherit;
   max-height: inherit;
-  width: auto;
-  height: auto;
+  width: 140px;
+  height: 140px;
   margin-right: 10px;
+  border-radius: 10px;
 `;
 
 const LanyardSongDetails = styled.div`
-  flex: 2;
   flex-direction: column;
-  justify-content: flex-start;
+  min-height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+`;
+
+const SongDetailsText = styled.p`
+  display: flex;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const LanyardStatus = () => {
@@ -87,9 +95,11 @@ const LanyardStatus = () => {
             />
 
             <LanyardSongDetails>
-              <h4>{data?.data?.spotify?.song}</h4>
-              <p>by {data?.data?.spotify?.artist}</p>
-              <p>on {data?.data?.spotify?.album}</p>
+              <SongDetailsText>{data?.data?.spotify?.song}</SongDetailsText>
+              <SongDetailsText>
+                by {data?.data?.spotify?.artist.split(';')[0]}
+              </SongDetailsText>
+              <SongDetailsText>on {data?.data?.spotify?.album}</SongDetailsText>
             </LanyardSongDetails>
           </LanyardStatusContainer>
         </>
