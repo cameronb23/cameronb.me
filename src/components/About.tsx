@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-const KleidiLink = styled.a`
+const Link = styled.a`
   color: #4140a5;
 `;
 
@@ -11,13 +11,13 @@ const AboutMe = () => (
     <h3>Hi. I&apos;m Cameron.</h3>
     <p>
       I&apos;m a Software Engineer currently working at{' '}
-      <KleidiLink
-        href="https://kleidi.io"
+      <Link
+        href="https://onebrief.com/"
         target="_blank"
         rel="noreferrer noopener"
       >
-        Kleidi
-      </KleidiLink>
+        Onebrief
+      </Link>
       .
     </p>
   </div>
